@@ -7,7 +7,7 @@ Kafka를 통한 대용량 데이터 교류
 <br/>
 
 # Why? Kafka vs RabbitMq
-
+- ref : https://aws.amazon.com/ko/compare/the-difference-between-rabbitmq-and-kafka/
 
 <br/>
 
