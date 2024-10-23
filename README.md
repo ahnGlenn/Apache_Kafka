@@ -8,6 +8,7 @@ Kafka를 통한 대용량 데이터 교류
 
 # Why? Kafka vs RabbitMq
 - ref : https://aws.amazon.com/ko/compare/the-difference-between-rabbitmq-and-kafka/
+- 100만 건 이상의 데이터를 실시간 전송하고, 다른 애플리케이션에서 데이터 처리를 수행해야 한다면 Kafka를 사용하는 것이 더 적합
 
 <br/>
 
