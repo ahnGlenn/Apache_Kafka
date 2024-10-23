@@ -6,7 +6,7 @@ Kafka를 통한 대용량 데이터 교류
 
 <br/>
 
-# Why? Apache_Kafka?
+# Why? Kafka vs RabbitMq
 
 
 <br/>
