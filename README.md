@@ -56,3 +56,34 @@
    - Kubernetes, Docker 등을 이용해 Kafka와 Spring Boot 애플리케이션을 클라우드에 배포하고 확장.
 
 <br/>
+
+
+<!-- 
+css
+
+Apache_kafka/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── example/
+│   │   │           └── apache_kafka/
+│   │   │               ├── controller/
+│   │   │               │   └── KafkaController.java
+│   │   │               ├── service/
+│   │   │               │   ├── KafkaProducerService.java
+│   │   │               │   └── KafkaConsumerService.java
+│   │   │               └── MyKafkaProjectApplication.java
+│   │   └── resources/
+│   │       ├── application.properties
+│   │       └── logback-spring.xml (선택 사항: 로깅 설정 파일)
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── example/
+│                   └── mykafkaproject/
+│                       └── MyKafkaProjectApplicationTests.java
+├── build.gradle
+└── settings.gradle
+
+-->
