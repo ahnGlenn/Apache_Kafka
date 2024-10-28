@@ -25,7 +25,9 @@
 <br/>
 
 # 3. 구현
-그림 붙일 예정
+1. Zookeeper 설치 및 실행(kafka borker를 위한 선실행 필수!)
+2. Kafka 설치 및 실행
+3. 
 
 <br/>
 
