@@ -58,7 +58,24 @@
    - Kubernetes, Docker 등을 이용해 Kafka와 Spring Boot 애플리케이션을 클라우드에 배포하고 확장.
 
 <br/>
+<br/>
 
+# 6. 카프카 재기동
+1. SpringBoot앱 종료
+2. kafka 종료
+   - bin/kafka-server-stop.sh
+   - ps -ef | grep kafka
+   - 9092, already in use 발생 시 > kill -9 [pid]
+   - sudo rm -rf /tmp/kafka-logs (자동생성 로그 삭제)
+3. Zookeeper 종료
+   - ./zkServer.sh (start, stop, status)
+4. Zookeeper 재시작
+   - ./zkServer.sh (start, stop, status)
+5. Kafka 시작
+   - bin/kafka-server-start.sh config/server.properties
+6. SpringBoot앱 재시작
+
+<br/>
 
 <!-- 
 css
