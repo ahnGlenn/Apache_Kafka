@@ -64,9 +64,9 @@
 1. SpringBoot앱 종료
 2. kafka 종료
    - bin/kafka-server-stop.sh
+   - sudo rm -rf /tmp/kafka-logs (자동생성 로그 삭제)
    - ps -ef | grep kafka
    - 9092, already in use 발생 시 > kill -9 [pid]
-   - sudo rm -rf /tmp/kafka-logs (자동생성 로그 삭제)
 3. Zookeeper 종료
    - ./zkServer.sh (start, stop, status)
 4. Zookeeper 재시작
@@ -74,7 +74,9 @@
 5. Kafka 시작
    - bin/kafka-server-start.sh config/server.properties
 6. SpringBoot앱 재시작
-
+7. topic 생성/확인
+   - bin/kafka-topics.sh --create --topic <topic_name> --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1
+   - ./bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
 <br/>
 
 <!-- 
