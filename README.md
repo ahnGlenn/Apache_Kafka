@@ -61,18 +61,20 @@
 <br/><br/>
 
 # 6. 프로듀서 메시지 생성 > 컨슈머 메시지 수신 및 확인 (linux 환경)
-  > 프로듀서 시작
-    - 프로듀서 시작 및 입력모드 실행.
-    - 입력모드에 메시지 작성하면 topicNo1에 저장
-  ```
-  bin/kafka-console-producer.sh --topic topicNo1 --bootstrap-server localhost:9092
-  ```
-  > 컨슈머 시작
-    - Kafka 컨슈머는 토픽으로부터 데이터를 읽어오는 역할
-    - 다음 명령어로 컨슈머를 시작하여 프로듀서가 topicNo1으로 보낸 메시지를 확인
-  ```
-  bin/kafka-console-consumer.sh --topic topicNo1 --bootstrap-server localhost:9092 --from-beginning
-  ```
+> 프로듀서 시작
+
+  - 프로듀서 시작 및 입력모드 실행.
+  - 입력모드에 메시지 작성하면 topicNo1에 저장
+```
+bin/kafka-console-producer.sh --topic topicNo1 --bootstrap-server localhost:9092
+```
+> 컨슈머 시작
+
+  - Kafka 컨슈머는 토픽으로부터 데이터를 읽어오는 역할
+  - 다음 명령어로 컨슈머를 시작하여 프로듀서가 topicNo1으로 보낸 메시지를 확인
+```
+bin/kafka-console-consumer.sh --topic topicNo1 --bootstrap-server localhost:9092 --from-beginning
+```
 
 
 
