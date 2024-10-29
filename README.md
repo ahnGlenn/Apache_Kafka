@@ -76,6 +76,7 @@
 6. SpringBoot앱 재시작
 7. topic 생성/확인
    - bin/kafka-topics.sh --create --topic <topic_name> --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1
+   - 위에 <topic_name> 에서 괄호는 제거 해야함.
    - ./bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
 <br/>
 

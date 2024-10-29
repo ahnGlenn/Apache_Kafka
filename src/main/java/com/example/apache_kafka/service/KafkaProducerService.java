@@ -11,13 +11,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class KafkaProducerService {
 
-    private static final String TOPIC = "my-topic";
+    private static final String TOPIC = "topicNo1";
 
     @Autowired
     private KafkaTemplate<String, String> kafkaTemplate;
 
     public void sendMessage(String message) {
-        kafkaTemplate.send(TOPIC, message);
         System.out.println("Produced message: " + message);
+        kafkaTemplate.send(TOPIC, message);
     }
 }
