@@ -58,10 +58,18 @@
 3. 클라우드 배포 (선택 사항):
    - Kubernetes, Docker 등을 이용해 Kafka와 Spring Boot 애플리케이션을 클라우드에 배포하고 확장.
 
-<br/>
-<br/>
+<br/><br/>
 
-# 6. 카프카 재기동
+# 6. 프로듀서 메시지 생성 > 컨슈머 메시지 수신 및 확인 (linux 환경)
+  - >프로듀서 시작
+     bin/kafka-console-producer.sh --topic test-topic --bootstrap-server localhost:9092
+
+
+
+
+<br/><br/>
+
+# 7. 카프카 재기동
 1. SpringBoot앱 종료
 2. kafka 종료
    - bin/kafka-server-stop.sh
