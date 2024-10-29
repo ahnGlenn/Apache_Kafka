@@ -1,6 +1,6 @@
 <!-- 
 - 카프카 :  https://resilient-923.tistory.com/402 
-- 카프카 명령어(프로듀서 메시지 전송 후 컨슈머 메시지 get, 그룹생성, 토픽생성 등) : https://velog.io/@taehodot/SpringBoot-%EC%B9%B4%ED%94%84%EC%B9%B4%EC%99%80-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-%EC%97%B0%EB%8F%99
+- 카프카 명령어(프로듀서 메시지 전송 후 컨슈머 메시지 get, 그룹생성, 토픽생성 등) : https://velog.io/@denver_almighty/Kafka-Topic-%EB%A7%8C%EB%93%A4%EA%B8%B0
 -->
 # Apache_Kafka
 - Kafka를 통한 대용량 데이터 교류
