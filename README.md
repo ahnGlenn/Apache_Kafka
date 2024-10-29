@@ -1,5 +1,6 @@
 <!-- 
 - 카프카 :  https://resilient-923.tistory.com/402 
+- 카프카 명령어(프로듀서 메시지 전송 후 컨슈머 메시지 get, 그룹생성, 토픽생성 등) : https://velog.io/@denver_almighty/Kafka-Topic-%EB%A7%8C%EB%93%A4%EA%B8%B0
 -->
 # Apache_Kafka
 - Kafka를 통한 대용량 데이터 교류
@@ -57,10 +58,30 @@
 3. 클라우드 배포 (선택 사항):
    - Kubernetes, Docker 등을 이용해 Kafka와 Spring Boot 애플리케이션을 클라우드에 배포하고 확장.
 
-<br/>
-<br/>
+<br/><br/>
 
-# 6. 카프카 재기동
+# 6. 프로듀서 메시지 생성 > 컨슈머 메시지 수신 및 확인 (linux 환경)
+> 프로듀서 시작
+
+  - 프로듀서 시작 및 입력모드 실행.
+  - 입력모드에 메시지 작성하면 topicNo1에 저장
+```
+bin/kafka-console-producer.sh --topic topicNo1 --bootstrap-server localhost:9092
+```
+> 컨슈머 시작
+
+  - Kafka 컨슈머는 토픽으로부터 데이터를 읽어오는 역할
+  - 다음 명령어로 컨슈머를 시작하여 프로듀서가 topicNo1으로 보낸 메시지를 확인
+```
+bin/kafka-console-consumer.sh --topic topicNo1 --bootstrap-server localhost:9092 --from-beginning
+```
+
+
+
+
+<br/><br/>
+
+# 7. 카프카 재기동
 1. SpringBoot앱 종료
 2. kafka 종료
    - bin/kafka-server-stop.sh
