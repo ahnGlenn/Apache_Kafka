@@ -101,6 +101,7 @@ bin/kafka-console-consumer.sh --topic topicNo1 --bootstrap-server localhost:9092
    - ./bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
 <br/>
 
+
 <!-- 
 css
 
