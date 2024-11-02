@@ -31,9 +31,6 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
 
     compileOnly 'org.projectlombok:lombok'
-
-    // Kafka 클라이언트 버전 명시
-    implementation 'org.apache.kafka:kafka-clients:3.7.1' // 사용하려는 Kafka 클라이언트 버전
 }
 
 tasks.named('test') {
