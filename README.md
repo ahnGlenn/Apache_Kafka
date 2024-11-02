@@ -15,20 +15,24 @@
 <br/>
 
 # 1. 프로젝트 목표
+- 도커로 zookeepr, kafka환경 구축
 - 데이터를 Kafka를 통한 실시간 데이터 교류
 - Kafka 메시지를 팀원이 구독하여 특정 DB까지 저장하도록
   
 <br/>
 
 # 2. 프로젝트 아키텍처
-그림 붙일 예정
+<img width="663" alt="Screenshot 2024-11-02 at 3 47 18 PM" src="https://github.com/user-attachments/assets/9e10f734-9905-4f03-9fc8-1d467fe6bf32">
+
+
 
 <br/>
 
 # 3. 구현
-1. Zookeeper 설치 및 실행(kafka borker를 위한 선실행 필수!)
-2. Kafka 설치 및 실행
-3. 
+(docker 미사용 시) - Zookeeper 설치 및 실행(kafka borker를 위한 선실행 필수!)
+1. SpringBoot 프로젝트 생성
+2. SpringBoot > docker-compose.yml (zookeeper, kafka) 실행
+  - : docker-compose up -d
 
 <br/>
 
@@ -55,8 +59,8 @@
    - Kafka 스트림 모니터링 도구(Kafka Manager, Confluent Control Center 등)를 사용하여 메시지 전송 상태를 실시간으로 확인.
    - Spring Boot Actuator를 이용해 애플리케이션 상태를 모니터링.
 
-3. 클라우드 배포 (선택 사항):
-   - Kubernetes, Docker 등을 이용해 Kafka와 Spring Boot 애플리케이션을 클라우드에 배포하고 확장.
+3. 클라우드 배포 :
+   - Docker를 이용해 Kafka와 Spring Boot 애플리케이션을 클라우드에 배포하고 확장.
 
 <br/><br/>
 
@@ -82,6 +86,12 @@ bin/kafka-console-consumer.sh --topic topicNo1 --bootstrap-server localhost:9092
 <br/><br/>
 
 # 7. 카프카 재기동
+    mac (docker)
+    - 도커 프로세스 확인 : docker ps
+    - 도커 프로세스 다운/재기동 : docker-compose down/ docker-compose up -d
+    - docker cli 접속 : docker exec -it kafka /bin/bash
+    - topic 생성 : kafka-topics --create --topic topicNo1 --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+
 1. SpringBoot앱 종료
 2. kafka 종료
    - bin/kafka-server-stop.sh
