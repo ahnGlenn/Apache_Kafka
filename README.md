@@ -80,7 +80,6 @@ bin/kafka-console-consumer.sh --topic topicNo1 --bootstrap-server localhost:9092
 
 
 
-
 <br/><br/>
 
 # 7. 카프카 재기동
