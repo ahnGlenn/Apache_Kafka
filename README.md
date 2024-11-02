@@ -22,7 +22,8 @@
 <br/>
 
 # 2. 프로젝트 아키텍처
-그림 붙일 예정
+<img width="113" alt="image" src="https://github.com/user-attachments/assets/2e3c187c-12b5-44b7-b8f8-0726e0bc5318">
+
 
 <br/>
 
