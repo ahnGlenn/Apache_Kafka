@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181  # 클라이언트 포트 설정
+    networks:
+      - kafka-network
+
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    container_name: kafka
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092  # 모든 인터페이스에서 수신
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092  # 다른 컨테이너가 이 브로커에 접근할 때 사용할 주소
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT  # 보안 프로토콜 설정
+    depends_on:
+      - zookeeper
+    networks:
+      - kafka-network
+
+networks:
+  kafka-network:
+    driver: bridge
