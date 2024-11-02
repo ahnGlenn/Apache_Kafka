@@ -22,6 +22,8 @@ spring:
     template:
       default-topic: topicNo1
 
+
+# 이거안하면 계속 디버깅됨
 logging:
   level:
     org.apache.kafka: WARN  # Kafka 관련 로그를 WARN 레벨로 설정
