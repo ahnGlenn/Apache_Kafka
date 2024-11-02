@@ -18,8 +18,9 @@ services:
     environment:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092  # 모든 인터페이스에서 수신
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092  # 다른 컨테이너가 이 브로커에 접근할 때 사용할 주소
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092  # 다른 컨테이너가 이 브로커에 접근할 때 사용할 주소
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT  # 보안 프로토콜 설정
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
     depends_on:
       - zookeeper
     networks:

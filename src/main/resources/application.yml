@@ -3,7 +3,8 @@ spring:
     name: Apache_Kafka
 
   kafka:
-    bootstrap-servers: kafka:9092
+    # bootstrap-servers: kafka:9092
+    bootstrap-servers: localhost:9092
 
     # consumer setting
     consumer:
@@ -20,3 +21,8 @@ spring:
     # 기본 토픽 설정
     template:
       default-topic: topicNo1
+
+logging:
+  level:
+    org.apache.kafka: WARN  # Kafka 관련 로그를 WARN 레벨로 설정
+    org.springframework.kafka: WARN  # Spring Kafka 관련 로그도 WARN 레벨로 설정
