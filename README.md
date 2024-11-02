@@ -89,7 +89,7 @@ bin/kafka-console-consumer.sh --topic topicNo1 --bootstrap-server localhost:9092
     mac (docker)
     - 도커 프로세스 확인 : docker ps
     - 도커 프로세스 다운/재기동 : docker-compose down/ docker-compose up -d
-    - docker cli 접속 : docker exec -it kafka /bin/bash
+    - docker cli 접속/나가기 : docker exec -it kafka /bin/bash   /    exit
     - topic 생성 : kafka-topics --create --topic topicNo1 --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 
 1. SpringBoot앱 종료
