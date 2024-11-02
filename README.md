@@ -58,8 +58,8 @@
    - Kafka 스트림 모니터링 도구(Kafka Manager, Confluent Control Center 등)를 사용하여 메시지 전송 상태를 실시간으로 확인.
    - Spring Boot Actuator를 이용해 애플리케이션 상태를 모니터링.
 
-3. 클라우드 배포 (선택 사항):
-   - Kubernetes, Docker 등을 이용해 Kafka와 Spring Boot 애플리케이션을 클라우드에 배포하고 확장.
+3. 클라우드 배포 :
+   - Docker를 이용해 Kafka와 Spring Boot 애플리케이션을 클라우드에 배포하고 확장.
 
 <br/><br/>
 
