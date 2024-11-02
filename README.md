@@ -24,8 +24,6 @@
 # 2. 프로젝트 아키텍처
 <img width="663" alt="Screenshot 2024-11-02 at 3 47 18 PM" src="https://github.com/user-attachments/assets/9e10f734-9905-4f03-9fc8-1d467fe6bf32">
 
-
-
 <br/>
 
 # 3. 구현
