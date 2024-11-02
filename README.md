@@ -41,6 +41,7 @@
 3. 테스트
    - REST API 클라이언트(Postman, Jmeter 등)를 사용하여 http://localhost:8080/publish?message=Hello Kafka로 요청을 보내면, 메시지가 Kafka에 전송된다.
    - 컨슈머 서비스에 메시지가 콘솔에 출력되는지 확인한다.
+     
 <br/>
 
 # 5. 성능 최적화 및 측정 계획
