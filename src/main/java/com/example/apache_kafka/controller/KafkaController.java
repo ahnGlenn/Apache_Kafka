@@ -14,24 +14,11 @@ public class KafkaController {
         this.kafkaproducerService = kafkaproducerService;
     }
 
+    // 메시지 전송 http://localhost:8080/kafka/send?message=HelloKafka
     // 메시지 전송 엔드포인트
     @GetMapping("/send")
     public String sendMessage(@RequestParam String message) {
         kafkaproducerService.sendMessage(message);
         return "Message sent: " + message;
     }
-
-//    // 메시지 전송 엔드포인트
-//    @GetMapping("/produce")
-//    public String produceMessage(@RequestParam("message") String message) {
-//        kafkaProducerService.sendMessage(message);
-//        return "Message sent: " + message;
-//    }
-//
-//    // 메시지 수신 엔드포인트
-//    @GetMapping("/consume")
-//    public List<String> consumeMessages() {
-//        return kafkaConsumerService.getMessages();
-//    }
-
 }
