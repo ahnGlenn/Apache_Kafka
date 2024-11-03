@@ -24,15 +24,12 @@
 # 2. 프로젝트 아키텍처
 <img width="663" alt="Screenshot 2024-11-02 at 3 47 18 PM" src="https://github.com/user-attachments/assets/9e10f734-9905-4f03-9fc8-1d467fe6bf32">
 
-
-
 <br/>
 
 # 3. 구현
 (docker 미사용 시) - Zookeeper 설치 및 실행(kafka borker를 위한 선실행 필수!)
 1. SpringBoot 프로젝트 생성
 2. SpringBoot > docker-compose.yml (zookeeper, kafka) 실행
-  - : docker-compose up -d
 
 <br/>
 
@@ -44,6 +41,7 @@
 3. 테스트
    - REST API 클라이언트(Postman, Jmeter 등)를 사용하여 http://localhost:8080/publish?message=Hello Kafka로 요청을 보내면, 메시지가 Kafka에 전송된다.
    - 컨슈머 서비스에 메시지가 콘솔에 출력되는지 확인한다.
+     
 <br/>
 
 # 5. 성능 최적화 및 측정 계획
@@ -79,7 +77,6 @@ bin/kafka-console-producer.sh --topic topicNo1 --bootstrap-server localhost:9092
 ```
 bin/kafka-console-consumer.sh --topic topicNo1 --bootstrap-server localhost:9092 --from-beginning
 ```
-
 
 
 
