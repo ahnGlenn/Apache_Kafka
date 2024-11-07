@@ -30,6 +30,8 @@
 (docker 미사용 시) - Zookeeper 설치 및 실행(kafka borker를 위한 선실행 필수!)
 1. SpringBoot 프로젝트 생성
 2. SpringBoot > docker-compose.yml (zookeeper, kafka) 실행
+3. 
+
 
 <br/>
 
