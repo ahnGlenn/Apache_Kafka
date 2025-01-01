@@ -4,7 +4,8 @@ spring:
 
   kafka:
     # bootstrap-servers: kafka:9092
-    bootstrap-servers: localhost:9092
+    # bootstrap-servers: localhost:9092
+    bootstrap-servers: localhost:9091,localhost:9092,localhost:9093
 
     # consumer setting
     consumer:

@@ -92,10 +92,20 @@ bin/kafka-console-consumer.sh --topic topicNo1 --bootstrap-server localhost:9092
     - docker cli 접속/나가기 : docker exec -it kafka /bin/bash   /    exit
     - topic 생성 : kafka-topics --create --topic topicNo1 --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
     - topic 삭제 : kafka-topics --delete --topic topicNo1 --bootstrap-server localhost:9092
-
+    - topic 확인 :
+      1. cli 접속 : docker exec -it apache_kafka-kafka-1-1 /bin/bash
+      2. kafka-topics --bootstrap-server kafka-1:29091 --list
+      3. 해당 토픽내 메시지 확인 : kafka-console-consumer --bootstrap-server kafka-1:29091 --topic topicNo1 --from-beginning
     메시지 발송/확인
     - cli접속 후 메시지 발행 : kafka-console-producer --topic topicNo1 --bootstrap-server localhost:9092
     - 메시지 확인 : kafka-console-consumer --topic topicNo1 --from-beginning --bootstrap-server localhost:9092
+    
+    zookeeper cli 접속법
+    - docker exec -it zookeeper /bin/bash
+    - 일단 찾아봐 : find / -name zkCli.sh 2>/dev/null
+    - 없으면 cd /usr/bin 에서 zookeeper-shell 실행시켜 > zookeeper-shell localhost:2181
+    - ls / : 주키퍼 노드 확인, ls /brokers/ids
+    - 문제되는 ids 삭제 delete /brokers/ids/2
 
 
 1. SpringBoot앱 종료
