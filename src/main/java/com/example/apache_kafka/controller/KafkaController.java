@@ -37,9 +37,13 @@ public class KafkaController {
 
     // 1. 스케줄러 + 비동기 + 멀티쓰레드 환경으로 메시지 발행
     //    스케줄러메시지 발생 > 비동기(kafkaTaskExecutor 쓰레드참조) > 프로듀서로 메시지 발행
+    private boolean hasRun = false; // 최초 한번 실행을 확인하기위해
     @Scheduled(fixedRate = 1000) //1초마다 메시지 1000개 전송
     public void sendMessages() {
-        for (int i = 0; i < 1000; i++) {
+        if (hasRun) return; // 이미 실행되었다면 종료
+        hasRun = true;
+
+        for (int i = 0; i < 2000; i++) {
             String message = "Message " + i + " at " + System.currentTimeMillis();
             sendAsyncMessage(message);
         }
